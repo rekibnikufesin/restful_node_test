@@ -40,7 +40,7 @@ describe('/add POST', () => {
                 done();
             });
     });
-    it('should return 400 for non-integer values', (done) =>{
+    it('should return HTTP 400 for non-number variables', (done) => {
         chai.request(server)
             .post('/add')
             .set('content-type', 'application/json')
